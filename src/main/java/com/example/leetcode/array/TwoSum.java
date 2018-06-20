@@ -3,6 +3,8 @@
  */
 package com.example.leetcode.array;
 
+import com.alibaba.fastjson.JSONObject;
+
 import java.util.HashMap;
 
 class TwoSum {
@@ -20,8 +22,8 @@ class TwoSum {
 
     public static void main(String[] args) {
         int[] nums = {3, 2, 4};
-        int[] ans = new TwoSum().twoSum(nums, 6);
-        System.out.println(ans);
+        int[] result = new TwoSum().twoSum(nums, 6);
+        System.out.println(JSONObject.toJSONString(result));
     }
 
     public int[] twoSum(int[] nums, int target) {
