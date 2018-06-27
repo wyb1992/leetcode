@@ -1,14 +1,13 @@
 /**
  * Created by wyb on 2018/6/20.
  */
-package com.example.leetcode.array;
+package com.example.leetcode.twoSum;
 
 import com.alibaba.fastjson.JSONObject;
 
 import java.util.HashMap;
 
-class TwoSum {
-    /*
+/*
     * 题目描述
     *
     * 给定一个整数数组和一个目标值，找出数组中和为目标值的两个数。
@@ -19,6 +18,7 @@ class TwoSum {
     * 所以返回 [0, 1]
     *
     * */
+class TwoSum {
 
     public static void main(String[] args) {
         int[] nums = {3, 2, 4};
