@@ -14,11 +14,11 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
     public static void main(String[] args) {
         String characters = "abcabcbb";
-        int result = new LongestSubstringWithoutRepeatingCharacters().LongestSubstringWithoutRepeatingCharacters(characters);
+        int result = new LongestSubstringWithoutRepeatingCharacters().longestSubstringWithoutRepeatingCharacters(characters);
         System.out.println(result);
     }
 
-    public int LongestSubstringWithoutRepeatingCharacters(String characters) {
+    public int longestSubstringWithoutRepeatingCharacters(String characters) {
         char[] array = characters.toCharArray();
         int[] cnt = new int[256];
         int result = 0;
