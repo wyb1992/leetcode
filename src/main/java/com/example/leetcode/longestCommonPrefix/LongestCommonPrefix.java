@@ -1,10 +1,5 @@
 package com.example.leetcode.longestCommonPrefix;
 
-import com.alibaba.fastjson.JSONObject;
-import org.apache.commons.lang3.StringUtils;
-
-import java.util.Arrays;
-
 /**
  * 编写一个函数来查找字符串数组中的最长公共前缀。
  * 如果不存在公共前缀，返回空字符串 ""。
@@ -29,16 +24,16 @@ public class LongestCommonPrefix {
     }
 
     public String longestCommonPrefix(String[] strs) {
-        String sb = "";
+        String prefix = strs[0];
         for (int i = 1, length = strs.length; i < length; i++) {
-            String[] old = StringUtils.isBlank(sb) ? strs[0].split("") : sb.split("");
-            String[] array = strs[i].split("");
-            for (int j = 0, len = array.length; j < len; j++) {
-                if (array[j].equals(old[j])) {
-                    System.out.println(JSONObject.toJSONString(Arrays.copyOfRange(array, 0, j)));
-                }
+            int j = 0;
+            while( j < strs[i].length() && j < prefix.length() && strs[i].charAt(j) == prefix.charAt(j)) {
+                j++;
             }
+            if( j == 0)
+                return "";
+            prefix = prefix.substring(0, j);
         }
-        return sb;
+        return prefix;
     }
 }
