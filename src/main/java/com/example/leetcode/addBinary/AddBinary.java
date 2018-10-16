@@ -12,7 +12,6 @@ public class AddBinary {
 
     public String addBinary(String a, String b) {
         String ans = "";
-
         int carry = 0;
         for (int i = a.length() - 1, j = b.length() - 1; i >= 0 || j >= 0; i--, j--) {
             int sum = carry;
